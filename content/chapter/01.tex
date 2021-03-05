@@ -1,42 +1,20 @@
-%!TEX root = ../../main.tex
+\chapter{A-priori-Wahrscheinlichkeit}
 
-\chapter{Das Monty-Hall-Problem - Einführung}
+Die A-prior-Wahrscheinlichkeit ist in den Naturwissenschaften der Wahrscheinlichkeitswert, der aufgrund von allgmemeinem Vorwissen über die Eigenschaften des Systems
+(Ein Beispiel ist der Würfel, mit seinen symmetrischen Eigenschaften) gewonnen wird. Die A-prior-Wahrscheinlichkeiten sind die Grundvorraussetzungen
+bei der Berechnung der bedingten Wahrscheinlichkeit eines zusammengesetzen Ereignisses und beim bayesschen Wahrscheinlichkeitsbegriff \footnote[1]{}.
+Die älteste Methode für die Bestimmung von A-prior-Wahrscheinlichkeiten stammt von Laplace. Sofern es keinen keinen expliziten Grund gibt, die ursprünglich
+offensichtliche Annahme zu ändern, wird allen Elementarereignissen die gleiche Wahrscheinlichkeit zugeordnet. \cite[S. 80f]{Pap:1995}
+Nimmt man das oben genante Beispiel eines Würfels ergibt sich die folgende Wahrscheinlichkeitsverteilung:
 
-Das Monty-Hall-Problem ist Statistikern als Paradoxon in der Elementarwahrscheinlichkeitstheorie bekannt. Es geht dabei um die Frage, ob eine Wahl, die zunächst 
-zufällig unter drei \footnote[1]{a priori} gleich wahrscheinlichen Möglichkeiten getroffen wurde, geändert werden sollte, wenn zusätzliche Informationen enthüllt werden.
-Die Aufgabe ist ursprünglich aus der von Monty Hall modertierten Spielshow "Lets Make a Deal" abzuleiten.
+\begin{itemize} 
+    \item Zahl 1: Wahrscheinlichkeit = $\frac{1}{6}$
+    \item Zahl 2: Wahrscheinlichkeit = $\frac{1}{6}$
+    \item Zahl 3: Wahrscheinlichkeit = $\frac{1}{6}$
+    \item Zahl 4: Wahrscheinlichkeit = $\frac{1}{6}$
+    \item Zahl 5: Wahrscheinlichkeit = $\frac{1}{6}$
+    \item Zahl 6: Wahrscheinlichkeit = $\frac{1}{6}$
+\end{itemize}
 
-
-% \begin{figure}[h]
-% \centering
-% \includegraphics[height=.8\textwidth]{logo.png}
-% \caption{Das Logo der Musterfirma\footnotemark}
-% \end{figure}
-
-
-
-%\begin{wrapfigure}{r}{.4\textwidth}
-%\centering
-%\includegraphics[height=.35\textwidth]{logo.png}
-%\vspace{-15pt}
-%\caption{Das Logo der Musterfirma\footnotemark}
-%\end{wrapfigure}
-%Quelle muss in Fußnote stehen (da sonst aufgrund eines Fehlers nicht kompiliert
-% wird)
-\footnotetext{aus \cite{mustermann:2012}}
-
-
-% \begin{equation}
-% t-t_{0}=\sqrt{\frac{l}{g}}\int_{0}^{\varphi}{\frac{d\psi}{\sqrt{1-k^{2}\sin^{2} {\psi}}}} = \sqrt{\frac{l}{g}} F(k,\varphi)
-% \label{xyz}
-% \end{equation}
-
-% \begin{itemize}
-% \item Dies ist der erste Punkt, der aufgeführt wird.
-% \item Dies ist der zweite Punkt, der aufgeführt wird. Manchmal will man auch etwas \textbf{fett} oder \textit{kursiv} oder \textbf{\textit{beides in Kombination}}  drucken.
-% \item Dies ist der dritte Punkt, der aufgeführt wird.
-% \end{itemize}
-
-
-Verweise auf das Glossar: \gls{Glossareintrag}, \glspl{Glossareintrag}
-
+Dies ist allerdings nur der Fall, solange man keinen Grund hat anzunehmen, dass der Würfel manipuliert sei. Es handelt sich also um Elementarereignisse, der
+alle dieselbe Wahrscheinlichkeit zugeordnet sind.
