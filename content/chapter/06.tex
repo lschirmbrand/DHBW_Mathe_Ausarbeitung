@@ -1,6 +1,55 @@
-\chapter{Rolle des Moderators}
+\chapter{Die Rolle des Moderators}
 
-\section{Moderator ist böse}
+Aufgrund von nicht eindeutig ausformulierten Regeln befanden einige Wissenschaftler die Aufgabe für nicht eindeutig lösbar und es wurde eine Neuformuliering des
+Ziegenproblems vorgeschlagen. Diese abgeänderte Version der Aufgabe wurde als das Monty-Hall-Standard-Problem bekannt. Weiterhin sollte das Problem zur gleichen
+Lösung, wie die von Marilyn vos Savant vorgelegten. Zusätzlich sollen aber nun weitere Zusatzinformationen gegeben werden, welche erfahrungsbezogene Antworten ungültig
+machen, und darüber hinaus soll die aktuelle Spielsituation berücksichtigt werden. (Einfügen:  Peter R. Mueser, Donald Granberg: The Monty Hall Dilemma Revisited: Understanding the Interaction of Problem Definition and Decision Making. (Memento vom 22. Juli 2012 im Internet Archive) In: University of Missouri Working Paper. 1999-06.)
+
+Aufgeteilt in Einzelschritte ergeben sich dann die folgenden Regeln für den Spieler und den Host.
+\begin{enumerate}
+    \item Ein Auto und zwei Ziegen werden zufällig auf drei Tore verteilt.
+    \item Zu Beginn des Spiels sind alle Tore verschlossen, sodass Auto und Ziegen nicht sichtbar sind.
+    \item Der Kandidat, dem die Position des Autos völlig unbekannt ist, wählt ein Tor aus, das aber vorerst verschlossen bleibt.
+    \item Fall A: Hat der Kandidat das Tor mit dem Auto gewählt, öffnet der Moderator eines der beiden anderen Tore, hinter dem sich immer eine Ziege befindet. 
+    Der Moderator hat dabei die freie Wahl. Bei den nachfolgenden Lösungen werden allerdings Zusatzannahmen über die Art des Auswahlprozesses, die der Moderator
+    verwendet, gemacht.
+    \item Fall B: Hat der Kandidat ein tor mit einer Ziege gewählt, \textit{muss} der Moderator das Tor nehmen, hinter dem die andere Ziege steht.
+    \item Der Moderator bietet dem Kandidaten an. seine Entscheidung zu überdenken und das andere ungeöffnete Tor zu wählen.
+    \item Das letztendlich vom Kandidaten gewählte Tor wird geöffnet und er erhält das Objekt, dass sich hinter dem Tor befindet.
+\end{enumerate}
+
+\textbf{Bedeutung der Zusatzannahme zum Verhalten des Moderators:}
+
+\section{Moderator ist faul}
+
+Für die folgende Erklärung wird angenommen, dass der Spieler zu Beginn immer Tor 1 wählt. Der Moderator sei faul und beharre immer auf das gleiche Tor, sofern dieses
+Tor kein Auto enthält, in diesem Fall muss der Moderator seine Faulheit überwinden und nimmt ein anderes Tor. Analog dazu funktionieren auch alle anderen Annahmen,
+die das Schema einhalten.
+
+Es handelt sich hierbei um ein Laplace-Experiment. Alle Tore haben die selbe Wahrscheinlichkeit und die zwei Ziegen können von einander unterschieden werden. 
+
+\subsection{Tabellarische Lösung}
+
+
+\begin{tabular}[h]{lccccr}
+    \textbf{Fall:} & \textbf{Tor 1} & \textbf{Tor2} & \textbf{Tor3} & \textbf{Wahl des Hosts} & \textbf{Gewinn für den Spieler} \\
+    1 & Auto & Ziege & Ziege & Tor 3 & Nein\\
+    2 & Ziege & Auto & Ziege & Tor 3 & Ja\\
+    3 & Zeige & Ziege & Auto & Tor 2, da Tor 3 Auto & Ja\\
+    4 & Auto & Ziege & Ziege & Tor 3 & Nein\\
+    5 & Ziege & Auto & Ziege & Tor 3 & Ja\\
+    6 & Ziege & Ziege & Auto & Tor 2, da Tor 3 Auto & Ja\\
+\end{tabular}
+
+Zur Auswertung der tabellarischen Ausarbeitung muss man nun die relevanten Fälle überprüfen. Laut der zuvor festgelegten Bedingungen darf der Moderator nur Tor 3 öffnen.
+Dies geschieht in den Fällen 1,2,4 und 5. Der Spieler gewinnt aber nur in zwei dieser vier Fällen. Das bedeutet die Siegeswahrscheinlichkeit beträgt $\frac{2}{4}$,
+also $\frac{1}{2}$.
+\subsection{Formelle mathematische Lösung}
+
+\begin{align}
+    E \underset{Einstein}{=} m \cdot c^2
+    \underset{Pythagoras}{=} m \cdot (a^2 + b^2)
+\end{align}
 
 \section{Moderator ist gut}
 
