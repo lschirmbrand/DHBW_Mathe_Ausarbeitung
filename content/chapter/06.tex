@@ -18,9 +18,10 @@ Aufgeteilt in Einzelschritte ergeben sich dann die folgenden Regeln für den Spi
     \item Das letztendlich vom Kandidaten gewählte Tor wird geöffnet und er erhält das Objekt, dass sich hinter dem Tor befindet.
 \end{enumerate}
 
+\newpage
 \textbf{Bedeutung der Zusatzannahme zum Verhalten des Moderators:}
 
-\section{Moderator ist faul}
+\section{Der Moderator handelt faul}
 
 Für die folgende Erklärung wird angenommen, dass der Spieler zu Beginn immer Tor 1 wählt. Der Moderator sei faul und beharre immer auf das gleiche Tor, sofern dieses
 Tor kein Auto enthält, in diesem Fall muss der Moderator seine Faulheit überwinden und nimmt ein anderes Tor. Analog dazu funktionieren auch alle anderen Annahmen,
@@ -44,7 +45,13 @@ Es handelt sich hierbei um ein Laplace-Experiment. Alle Tore haben die selbe Wah
 Zur Auswertung der tabellarischen Ausarbeitung muss man nun die relevanten Fälle überprüfen. Laut der zuvor festgelegten Bedingungen darf der Moderator nur Tor 3 öffnen.
 Dies geschieht in den Fällen 1,2,4 und 5. Der Spieler gewinnt aber nur in zwei dieser vier Fällen. Das bedeutet die Siegeswahrscheinlichkeit beträgt $\frac{2}{4}$,
 also $\frac{1}{2}$.
+
+\newpage
 \subsection{Formelle mathematische Lösung}
+
+Durch die im Vorhinein festgelegten Bedingungen ergibt sich die folgende Situation:
+Der Spieler aus dem Publikum hat das Tor 1 gewählt. Der Moderator hat daraufhin das Tor 3 geöffnet.
+Somit gelten dann folgende mathematische Beziehungen unter Berücksichtigung der zuvor definierten Ereignismengen:
 
 \begin{equation} \label{eq1}
 \begin{split}
@@ -55,8 +62,16 @@ also $\frac{1}{2}$.
 \end{split}
 \end{equation}
 
-\section{Moderator ist gut}
+Die Anwendung des zuvor erläuterten Satzes von Bayes ergibt dann für die bedingte Wahrscheinlichkeit, dass sich das Auto hinter dem Tor 2 befindet.
 
-\section{Moderator ist neutral}
+\begin{equation}
+\begin{split}
+    P(G_2 | M_3) & = \frac{P(M_3 | G_2) \cdot P(G_2)}{P(M_3 | G_1) \cdot P(G_1) +
+    P(M_3 | G_2) \cdot P(G_2) + P(M_3 | G_3) \cdot P(G_3)} \\
+    & = \frac{1 \cdot \frac{1}{3}}{1 \cdot \frac{1}{3} + 1 \cdot \frac{1}{3} + 1 \cdot \frac{1}{3}}
+\end{split}
+\end{equation}
 
-\section{Moderator ist zufall}
+\section{Der Moderator handelt ausgeglichen}
+
+\section{Der Moderator handelt unausgeglichen}
