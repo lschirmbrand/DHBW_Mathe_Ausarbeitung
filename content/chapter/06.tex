@@ -72,6 +72,68 @@ Die Anwendung des zuvor erläuterten Satzes von Bayes ergibt dann für die bedin
 \end{split}
 \end{equation}
 
+\newpage
 \section{Der Moderator handelt ausgeglichen}
 
+Hierfür wird angenommen, dass der Spieler zu Beginn Tor 1 wählt und sich danach umentscheidet. Ist hinter dem ersten Tor das Auto enthalten, wählt der Moderator zufällig eine der beiden anderen Tore aus.
+Wichtig hierbei ist, dass der Moderator diese Tore mit der gleichen Wahrscheinlichkeit auswählt und dieser somit ausgeglichen handelt. Analog dazu funktionieren auch alle anderen Annahmen,
+die das Schema einhalten.
+
+Es handelt sich hierbei um ein Laplace-Experiment. Alle Tore haben die selbe Wahrscheinlichkeit und die zwei Ziegen können von einander unterschieden werden.
+
+\subsection{Tabellarische Lösung}
+
+\begin{tabular}[h]{lccccr}
+    \textbf{Fall:} & \textbf{Tor 1} & \textbf{Tor2} & \textbf{Tor3} & \textbf{Wahl des Hosts} & \textbf{Gewinn für den Spieler} \\
+    1 & Auto & Ziege & Ziege & Tor 2 & Nein\\
+    2 & Ziege & Auto & Ziege & Tor 3 & Ja\\
+    3 & Zeige & Ziege & Auto & Tor 2 & Ja\\
+    4 & Auto & Ziege & Ziege & Tor 3 & Nein\\
+    5 & Ziege & Auto & Ziege & Tor 3 & Ja\\
+    6 & Ziege & Ziege & Auto & Tor 2 & Ja\\
+\end{tabular}
+
+Zur Auswertung werden die Fälle hierfür mit einander verglichen, in dem der Moderator Tor 3 wählt. Dies ist in den Fällen 2, 4 und 5 erfüllt.
+Dabei sieht man, dass der Kandidat in 2 von 3 Fällen das Auto durch den Wechsel findet. Dies ist auch für den Fall gleich, dass der Moderator Tor 2 wählt und 
+der Kandidat sich für das nicht zuvor gewählte Tor entscheidet.
+
+Somit beträgt die Wahrscheinlichkeit $\frac{2}{3}$, dass der Kandidat das Tor, hinterdem sich das Auto befindet, öffnet.
+
+\newpage
+\subsection{Formelle mathematische Lösung}
+Wie zuvor beschrieben wählt der Kandidat Tor 1 aus und wechselt, nach dem öffnen eines Tores durch den Moderator, zu dem nicht zuvor nicht ausgewähltem Tor.
+
+Folgende Ereignismengen können bei dieser Annahme definiert werden:
+\begin{equation} \label{eq1}
+    \begin{split}
+        P(G_1) = P(G_2) = P(G_3) = \frac{1}{3} 
+        \\
+        \\
+        P(M_3 | G_1) = \frac{1}{2} 
+        \\
+        \\
+        P(M_3 | G_2) = 1 
+        \\
+        \\ 
+        P(M_3 | G_3) = 0
+    \end{split}
+\end{equation}
+
+Unter der Anwendung des Satzes von Bayes kann folgende Wahrscheinlichkeit bestimmt werden:
+
+\begin{equation}
+    \begin{split}
+        P(G_2 | M_3) & = \frac{P(M_3 | G_2) \cdot P(G_2)}{P(M_3 | G_1) \cdot P(G_1) +
+        P(M_3 | G_2) \cdot P(G_2) + P(M_3 | G_3) \cdot P(G_3)} 
+        \\
+        \\
+        & = \frac{1 \cdot \frac{1}{3}}{\frac{1}{2} \cdot \frac{1}{3} + 1 \cdot \frac{1}{3} + 0 \cdot \frac{1}{3}} 
+        \\
+        \\
+        & = \frac{2}{3}
+    \end{split}
+\end{equation}
+
+Somit ist bewiesen, dass die anfangs Wahrscheinlichkeiten von $\frac{1}{3}$ durch das Wechseln der Tores auf ein Wahrscheinlichkeit von $\frac{2}{3}$ erhöht werden kann.  
+\newpage
 \section{Der Moderator handelt unausgeglichen}
