@@ -137,3 +137,39 @@ Unter der Anwendung des Satzes von Bayes kann folgende Wahrscheinlichkeit bestim
 Somit ist bewiesen, dass die anfangs Wahrscheinlichkeiten von $\frac{1}{3}$ durch das Wechseln der Tores auf ein Wahrscheinlichkeit von $\frac{2}{3}$ erhöht werden kann.  
 \newpage
 \section{Der Moderator handelt unausgeglichen}
+Hierfür muss folgende Zusatzannahme getroffen werden. Hat der Kandidat zuerst das Tor mit dem Auto ausgewählt, entscheidet sich der Moderator mit einer Wahrscheinlichkeit von p 
+für das Tor mit der höchstmöglichen Nummer. Dadurch lässt sich folgern dass die Wahrscheinlichkeit, dass der Moderator das Tor mit der kleinstenmöglichen Nummer öffnet 1 - p beträgt.
+Die mathematische Beziehungen sind dann wie folgt aufgebaut:
+
+\begin{equation} \label{eq1}
+    \begin{split}
+        P(G_1) = P(G_2) = P(G_3) = \frac{1}{3} 
+        \\
+        \\
+        P(M_3 | G_1) = p 
+        \\
+        \\
+        P(M_3 | G_2) = 1 
+        \\
+        \\ 
+        P(M_3 | G_3) = 0
+    \end{split}
+\end{equation}
+
+Durch das Anwenden des Satzes von Bayes erhählt man folgende Gleichung für die Wahrscheinlichkeit, dass hinter Tor 2 das Auto sich befindet:
+
+\begin{equation}
+    \begin{split}
+        P(G_2 | M_3) & = \frac{P(M_3 | G_2) \cdot P(G_2)}{P(M_3 | G_1) \cdot P(G_1) +
+        P(M_3 | G_2) \cdot P(G_2) + P(M_3 | G_3) \cdot P(G_3)} 
+        \\
+        \\
+        & = \frac{1 \cdot \frac{1}{3}}{p \cdot \frac{1}{3} + 1 \cdot \frac{1}{3} + 0 \cdot \frac{1}{3}} 
+        \\
+        \\
+        & = \frac{1}{p+1}
+    \end{split}
+\end{equation}
+
+Durch aufstellen dieser Gleichung könenn die vorher genannten Zusatzannahme des Verhaltens des Moderators abgeleitet werden.
+Bei dem ausgeglichenen Moderator wäre p = $\frac{1}{2}$ und bei dem faulen Moderator p = 1.
