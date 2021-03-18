@@ -10,7 +10,7 @@ offensichtliche Annahme zu ändern, wird allen Elementarereignissen die gleiche 
 
 Nimmt man das oben genante Beispiel eines Würfels ergibt sich die folgende Wahrscheinlichkeitsverteilung:
 
-\begin{itemize} 
+\begin{itemize}
     \item Zahl 1: Wahrscheinlichkeit = $\frac{1}{6}$
     \item Zahl 2: Wahrscheinlichkeit = $\frac{1}{6}$
     \item Zahl 3: Wahrscheinlichkeit = $\frac{1}{6}$
@@ -24,14 +24,14 @@ alle dieselbe Wahrscheinlichkeit zugeordnet sind.
 
 \section{Satz von Bayes}
 
-Der Satz von Bayes ist ein mathematischer Satz, der aus der Wahrscheinlichkeitstheorie stammt. Er beschreibt die Berechnung bedingter 
+Der Satz von Bayes ist ein mathematischer Satz, der aus der Wahrscheinlichkeitstheorie stammt. Er beschreibt die Berechnung bedingter
 Wahrscheinlichkeiten\footnote{Die Wahrscheinlichkeit des Eintretens eines Ereignisses A unter der Bedingung, dass das Einteten eines anderen Ereignisses B bereits bekannt ist.}.
-Der Satz ist nach dem englischen Mathematiker Thomas Bayes benannt und wird auch als Formel von Bayes oder als Bayes-Theorem bezeichnet. \cite[S.411f]{Papulla:2014}
+Der Satz ist nach dem englischen Mathematiker Thomas Bayes benannt und wird auch als Formel von Bayes oder als Bayes-Theorem bezeichnet. \cite[S.411f]{Papula:2014}
 
 \subsection{Formel}
 
 Für zwei Ereignisse\footnote{Ein Ereignis ist in der Statistik ein Teil einer Menge von Ergebnissen eines Zufallexperiments, dem eine Wahrscheinlichkeit zugeordnet
-werden kann.} \textit{A} und \textit{B} mit \textit{P(B) > 0} lässt sich die Wahrscheinlichkeit von \textit{A} unter der Bedingung, dass \textit{B} eingetreten
+    werden kann.} \textit{A} und \textit{B} mit \textit{P(B) > 0} lässt sich die Wahrscheinlichkeit von \textit{A} unter der Bedingung, dass \textit{B} eingetreten
 ist, durch die Wahrscheinlichkeit von \textit{B} unter der Bedingung, dass \textit{A} eingetreten ist, errechnen:
 
 \begin{equation}
@@ -50,7 +50,7 @@ Hierbei ist
 Bei endlich vielen Ereignissen lautet der Satz von Bayes:
 
 Wenn \textit{$A_i, i = 1,..., N$} eine Zerlegung der Ergebnismenge in disjunkte Ereignisse ist, gilt für die A-posteriori-Wahrscheinlichkeit\footnote{TOBEDONE}
- \textit{$P(A_i | B)$}
+\textit{$P(A_i | B)$}
 
 \begin{equation}
     P(A_i | B) = \frac{P(B | A_i) \cdot P(A_i)}{P(B)} \underbrace{= \frac{P(B | A_i) \cdot P(A_i)}{\sum_{j = 1}^{N} P(B | A_j) \cdot P(A_j)}}_{Marginalisierung}
@@ -62,4 +62,4 @@ Da ein Ereignis \textit{A} und sein Komplement \footnote{Komplement to be done} 
     P(A | B) = \frac{P(B | A) \cdot P(A)}{P(B | A) \cdot P(A) + P(B | A^c) \cdot P(A^c)}
 \end{equation}
 
-\cite[S.411f]{Papulla:2014}
+\cite[S.411f]{Papula:2014}
