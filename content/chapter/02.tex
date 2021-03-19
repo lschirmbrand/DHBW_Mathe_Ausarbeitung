@@ -1,18 +1,31 @@
 %!TEX root = ../../main.tex
 
-\chapter{Das Monty-Hall-Problem - Einführung}
+\chapter{Das Monty-Hall-Problem}
+
+\section{Einführung}
 
 Das Monty-Hall-Problem (oft auch als Ziegenproblem bezeichnet) ist Statistikern als Paradoxon in der Elementarwahrscheinlichkeitstheorie bekannt. Es geht dabei um die Frage, ob eine Wahl, die zunächst
 zufällig unter drei a priori gleich wahrscheinlichen Möglichkeiten getroffen wurde, geändert werden sollte, wenn zusätzliche
-Informationen enthüllt werden. Die Aufgabe ist ursprünglich aus der von Monty Hall modertierten Spielshow ''Lets Make a Deal'' abzuleiten. Sie fand ihren Anfang
+Informationen enthüllt werden. Die Aufgabe ist ursprünglich aus der von Monty Hall modertierten Spielshow ,,Lets Make a Deal'' abzuleiten. Sie fand ihren Anfang
 1963 und ihr Ende 1977. In jeder Folge spielte der Host der Spielshow, Monty Hall, Spiele mit seinem Publikum. Diese Spiele variierten stark, jedoch war das Grundprinzip
-häufig das Selbe. Spieler aus dem Publikum mussten sich zwischen garantierten, kleinen Gewinnen und eventuellen, durch ''Glückspiel'' gewonnene, große Preise, entscheiden.
+häufig das Selbe. Spieler aus dem Publikum mussten sich zwischen garantierten, kleinen Gewinnen und eventuellen, durch ,,Glückspiel'' gewonnene, große Preise, entscheiden.
 In einer der Folgen, die häufig als die Klimax der Show beschrieben wird, wurde den Spielern aus dem Publikum drei identische Türen gezeigt. Hinter diesen drei
 identischen Türen befinden sich die potenziellen Gewinne, wovon zwei Gewinne Ziegen waren. Hinter der dritten Tür war jedoch der Hauptgewinn, ein neues Auto.
 
-Das Spiel konnte beginnen. Der Ablauf war nicht immer gleich. Ursprünglich entschied sich der Spieler für eine Tür, welche er allerdings noch nicht öffnete.
-Der Host gibt dem Spieler die Möglichkeit, seine Entscheidung zu ändern, sofern dieser es wünscht. der Spieler entscheidet sich für eine Tür, welche jedoch nicht geöffnet wird. Dann öffnet der Host eine Tür für
-den Spieler, von der er sicher weiß, dass sich eine Ziege dahinter befindet.
+Das Problem, wie es heutzutage unter Mathematikern bekannt ist, wurde ursprünglich als Leserbrief an Marilyn vos Savant (oft ,,die Klügste Frau der Welt genannt'') in ihrer Kolumne \textit{Ask Marilyn} im Magazin Parade veröffentlicht:
 
-In seiner populärsten Variante, welche im Folgenden zuerst ausgeführt wird, zeigt das Monty-Hall Problem auf, wie sich die Wahrnehmung von Wahrscheinlichkeiten von der tatsächlichen Mathematik unterscheidet.
-Wird einem zum ersten Mal das Problem gestellt, wählen die meisten intuitiv die ''falsche'' Option. Wird einem dann erklärt, warum man sich anders entscheiden sollte, scheint die Mathematik auf den ersten Blick paradox.
+\begin{quote}
+    Nehmen Sie an, Sie wären in einer Spielshow und hätten die Wahl zwischen drei Toren. Hinter einem der Tore ist ein Auto, hinter den anderen sind Ziegen. Sie wählen ein Tor, sagen wir, Tor Nummer 1, und der Showmaster, der weiß, was hinter den Toren ist, öffnet ein anderes Tor, sagen wir, Nummer 3, hinter dem eine Ziege steht. Er fragt Sie nun: ,,Möchten Sie das Tor Nummer 2?'' Ist es von Vorteil, die Wahl des Tores zu ändern? (\cite{Savant:1990})
+\end{quote}
+
+Dieses Problem zeigt, wie die intuitive Wahrnehmung von Wahrscheinlichkeiten von der tatsächlichen Mathematik abweichen kann. Selbst unter Mathematikern wurde das Problem und vor allem die von vos Savant vorgestellte Lösung stark diskutiert und kritisiert\footnote{wie wir später sehen werden nicht ganz zu Unrecht}.
+
+\section{Möglichkeiten des Kandiaten}
+
+Grundlegend hat der Kandidat nachdem der Moderator ein Ziegentor geöffnet hat: Wechseln oder nicht wechseln. Die meisten, die sich vorher noch nicht mit diesem Problem beschäftigt haben, werden intuitiv denken, dass sie hier eine Gewinnwahrscheinlichkeit von $50\%$ haben, egal ob sie wechseln oder nicht. Andere denken womöglich, der Moderator möchte einem dazu bringen, die Auswahl zu ändern, da sie mit ihrer ersten Wahl richtig lagen \footnote{Dass die meisten bei ihrer Ursprünglichen Wahl bleiben, wurde genauer in der Dokuserie ,,Mythbusters'' (Staffel 9, Episode 21) untersucht und bestätigt.}.
+
+\section{Die Lösung}
+
+Doch die Lösung von vos Savos sagt, man hätte eine Gewinnchance von \sfrac{2}{3} wenn man wechselt während man bei der ursprünglichen Wahl nur in \sfrac{1}{3} der Fälle das Auto gewinnt.
+
+Erklärt wird das dadurch, dass nach der ersten Wahl des Kandidaten die Chance, dass das Auto hinter seinem Tor steht, bei der a-priori-Wahrscheinlichkeit von \sfrac{1}{3} liegt. Die Wahrscheinlickeit, dass er falsch liegt, das Auto also hinter einem der anderen Tore steht, bei \sfrac{2}{3}. Wird nun ein Tor geöffnet, hinter der sich eine Ziege verbirgt, kann sich ja die Wahrscheinlichkeit dafür ob hinter dem zuerst gewählten Tor das Auto steht nicht verändern. Vielmehr kann man nun eine der anderen Türen ausschließen, womit die Wahrscheinlichkeit, dass der Kandidat zuerst falsch lag (\sfrac{2}{3}), für die verbleibende Tür gilt.
