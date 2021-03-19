@@ -41,25 +41,25 @@ ist, durch die Wahrscheinlichkeit von \textit{B} unter der Bedingung, dass \text
 Hierbei ist
 
 \begin{itemize}
-    \item \textit{P(A | B)} die bedingte Wahrscheinlichkeit des Ereignisses \textit{A} unter der Bedingung, dass \textit{B} eingetreten ist,
-    \item \textit{P(B | A)} die bedingte Wahrscheinlichkeit des Ereignisses \textit{B} unter der Bedingung, dass \textit{A} eingetreten ist,
-    \item \textit{P(A)} die A-priori-Wahrscheinlichkeit des Ereignisses \textit{A} und
-    \item \textit{P(B)} die A-priori-Wahrscheinlichkeit des Ereignisses \textit{B}.
+    \item $P(A | B)$ die bedingte Wahrscheinlichkeit des Ereignisses $A$ unter der Bedingung, dass $B$ eingetreten ist,
+    \item P(B | A) die bedingte Wahrscheinlichkeit des Ereignisses $B$ unter der Bedingung, dass $A$ eingetreten ist,
+    \item $P(A)$ die A-priori-Wahrscheinlichkeit des Ereignisses $A$ und
+    \item $P(B)$ die A-priori-Wahrscheinlichkeit des Ereignisses $B$.
 \end{itemize}
 
 Bei endlich vielen Ereignissen lautet der Satz von Bayes:
 
-Wenn \textit{$A_i, i = 1,..., N$} eine Zerlegung der Ergebnismenge in disjunkte Ereignisse ist, gilt für die A-posteriori-Wahrscheinlichkeit\footnote{TOBEDONE}
-\textit{$P(A_i | B)$}
+Wenn $A_i, i = 1,..., N$ eine Zerlegung der Ergebnismenge in disjunkte Ereignisse ist, gilt für die A-posteriori-Wahrscheinlichkeit\footnote{TOBEDONE}
+$P(A_i | B)$
 
 \begin{equation} \label{equ:bayes}
     P(A_i | B) = \frac{P(B | A_i) \cdot P(A_i)}{P(B)} \underbrace{= \frac{P(B | A_i) \cdot P(A_i)}{\sum_{j = 1}^{N} P(B | A_j) \cdot P(A_j)}}_{Marginalisierung}
 \end{equation}
 
-Da ein Ereignis \textit{A} und sein Komplement \footnote{Komplement to be done} \textit{$A^c$} stets eine Zerlegung der Ergebnismenge darstellen, gilt insbesondere
-
-\begin{equation}
-    P(A | B) = \frac{P(B | A) \cdot P(A)}{P(B | A) \cdot P(A) + P(B | A^c) \cdot P(A^c)}
-\end{equation}
-
 \cite[S.411f]{Papula:2014}
+
+Bei den Betrachtungen des Monty-Hall-Problems sind die A-priori-Wahrscheinlichkeiten $P(A_1) = P(A_2) = ... = P(A_N) = P(A)$ alle gleich. Dadurch lässt sich \autoref{equ:bayes} vereinfachen:
+
+\begin{equation} \label{equ:bayes_simpl}
+    P(A_i | B)  = \frac{P(B | A_i) \cdot P(A)}{\sum_{j=1}^{N} P(B | A_j) \cdot P(A)}  = \frac{P(B|A_i)}{\sum_{j=1}^{N} P(B | A_j)}
+\end{equation}
