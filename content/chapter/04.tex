@@ -1,21 +1,35 @@
-\chapter{Monty-Hall-Problem Argumente}
+\chapter{Weitere Varianten}
 
-Grundlegend ergeben sich drei Möglichkeiten zur Auswahl für den Spieler. Er entscheidet sich, seine Auswahl zu verwerfen und die alternative Tür zu nehmen.
-Weiterhin kann dem Spieler die Entscheidung unnötig vorkommen, fälschlicherweise wird oft angenommen, dass sich die Wahrscheinlichkeit nicht ändert. Zuletzt gibt es 
-noch die Möglichkeit, dass der Spieler die Auswahl nicht wechselt. Er lässt die von ihm initial gewählt Tür weiterhin als seine finale Auswahl bestehen.
-Im Folgenden werden alle Argumente genauer untersucht und besprochen.
+Die in \autoref{chap:monty-hall-standard} beschriebenen Varianten unterscheiden sich nur im Verhalten des Moderators. Alle anderen Regeln sind festgelegt.
+Jedoch geht aus der ursprünglichen Beschreibung von Marilyn vos Savant (\cite{Savant:1990}) zum Beispiel nicht hervor, ob der Moderator immer eine Türe öffnen und den Wechsel anbeiten muss.
 
-    \section{Auswahl wechseln!}
-    Diese Argumentation ist erfahrungsgemäß die am häufigsten getroffene und ist für die Meisten die überzeugenste Auswahl. Nehmen wir an, dass wir zu Beginn
-    100 identische Türen haben. Die initiale Entscheidung bedeutet, dass die Entscheidung eine Erfolgswahrscheinlichkeit von $\frac{1}{100}$ aufweist. Das bedeutet, 
-    dass sich der Preis in 99 von 100 Fällen hinter einer der anderen Türen befindet.
+Im Folgenden werden noch weitere Varianten des Monty-Hall-Problems geschildert, die von den Regeln des Monty-Hall-Standart-Problems in irgendeiner Weise abweichen.
 
-    \section{Wechseln macht keinen Unterschied}
-    Nachdem der Host eine Tür geöffnet hat, sind zwei Türen mit der selben Wahrscheinlichkeit übrig. Allerdings entspricht dies nur der Logik, wenn der Spieler das 
-    ursprüngliche Problem vergisst und die zwei verbleibenden Türen als neues Problem sieht. In diesem Fall entspricht die Wahrscheinlichkeit, trügerischerweise, in
-    beiden Fällen $\frac{1}{2}$. In einer solchen Sitaution sieht der Spieler keinen Sinn in einer Entscheidung und überlässt die Entscheidung über den Ausgang 
-    des Spiels, wie er annimmt, allein seinem Glück. Eine Entscheidung sei obsolet.
+\section{Das Monty-\textit{Fall}-Problem}
 
+In dieser Variante wird das Öffnen der Türe durch den Moderator nicht beabsichtigt. Stattdessen - wie der Name vermuten lässt - rutscht er aus und \textit{fällt} dabei auf eine der Türen, die der Kandidat nicht ausgewählt hat und dabei aufgeht. Nur aus reinem Zufall befindet sich hinter der Türe eine Ziege. Trotzdem wird dem Kandidaten ein Wechsel angeboten.
 
-    \section{Auswahl nicht wechseln!}
-    Argument zu nicht wechseln
+Betrachten wir wieder den Fall, dass der Kandidat zunächst deas erste Tor auswählt. Der Moderator rutsch aus und offenbart aus versehen hinter Tor 3 eine Ziege.
+
+\begin{equation*}
+    \begin{split}
+        P(M_3|G_1) &= 1 \\
+        P(M_3|G_2) &= 1 \\
+        P(M_3|G_3) &= 0 \\
+    \end{split}
+\end{equation*}
+
+Mit dem Satz von Bayes (\autoref{equ:bayes_simpl}) erhällt man folgende Wahrscheinlichkeiten, dass das Auto hinter den jeweiligen Toren steht:
+
+\begin{equation}
+    \begin{split}
+        P(G_1|M_3) & = \frac{P(M_3|G_1)}{P(M_3|G_1) + P(M_3|G_2) + P(M_3|G_3)} \\
+        & = \frac{1}{1+1+0} = \frac{1}{2} \\
+        P(G_2|M_3) & = \frac{1}{1+1+0} = \frac{1}{2} \\
+        P(G_3|M_3) & = \frac{0}{1+1+0} = 0
+    \end{split}
+\end{equation}
+
+In diesem Fall ist es also tatsächlich egal, ob man sich umentscheidet, oder bei der ersten Wahl bleibt.
+
+(\cite{Rosenthal:2008})

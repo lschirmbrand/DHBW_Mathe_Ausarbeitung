@@ -246,3 +246,8 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+
+#arara
+arara.yaml
+arara.log
+arara.xml
