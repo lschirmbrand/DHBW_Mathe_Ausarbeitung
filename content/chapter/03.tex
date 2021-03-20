@@ -2,7 +2,7 @@
 
 Aufgrund von nicht eindeutig ausformulierten Regeln befanden einige Wissenschaftler die Aufgabe für nicht eindeutig lösbar und es wurde eine Neuformuliering des
 Ziegenproblems vorgeschlagen. Diese abgeänderte Version der Aufgabe wurde als das Monty-Hall-Standard-Problem bekannt. Weiterhin sollte das Problem zur gleichen
-Lösung, wie die von Marilyn vos Savant vorgelegten. Zusätzlich sollen aber nun weitere Zusatzinformationen gegeben werden, welche erfahrungsbezogene Antworten ungültig
+Lösung führen, wie die, die von Marilyn vos Savant vorgelegt wurde. Zusätzlich sollen aber nun weitere Zusatzinformationen gegeben werden, welche erfahrungsbezogene Antworten ungültig
 machen, und darüber hinaus soll die aktuelle Spielsituation berücksichtigt werden. (\cite{Mueser:1999})
 
 \section{Definition der Spielregeln}
@@ -37,11 +37,11 @@ Es wird die Zusatzannahme getroffen, das der Moderator rein zufällig entscheide
 
 \begin{tabular}[h]{cccccc}
     \textbf{Fall} & \textbf{Tor 1} & \textbf{Tor2} & \textbf{Tor3} & \textbf{Wahl des Moderator} & \textbf{Gewinn beim} \\
-    \multicolumn{6}{c}{der Moderator möchte Tor 2 öffnen }                                                              \\
+    \multicolumn{6}{c}{\textit{der Moderator möchte Tor 2 öffnen} }                                                     \\
     1             & Auto           & Ziege         & Ziege         & Tor 2                       & Bleiben              \\
     2             & Ziege          & Auto          & Ziege         & Tor 3, da Tor 2 Auto        & Wechseln             \\
     3             & Ziege          & Ziege         & Auto          & Tor 2                       & Wechseln             \\
-    \multicolumn{6}{c}{der Moderator möchte Tor 3 öffnen }                                                              \\
+    \multicolumn{6}{c}{\textit{der Moderator möchte Tor 3 öffnen} }                                                     \\
     4             & Auto           & Ziege         & Ziege         & Tor 3                       & Bleiben              \\
     5             & Ziege          & Auto          & Ziege         & Tor 3                       & Wechseln             \\
     6             & Ziege          & Ziege         & Auto          & Tor 2, da Tor 3 Auto        & Wechseln             \\
@@ -55,7 +55,7 @@ Somit beträgt die Wahrscheinlichkeit $\sfrac{2}{3}$, dass der Kandidat das Tor,
 
 \subsubsection{Mathematische Lösung}
 
-Bei dieser und allen anderen Varianten sind die A-priori-Wahrscheinlichkeiten $P(G_i)$, dass sich hinter dem Tor $i$ das Auto befindet, gleich. Deshalb lassen sich diese beim Satz von Bayes (\autoref{equ:bayes}) kürzen und später kann die vereinfachte Version (\autoref{equ:bayes_simpl}) verwendet werden:
+Bei dieser und allen anderen Varianten sind die A-priori-Wahrscheinlichkeiten $P(G_i)$, dass sich hinter dem Tor $i$ das Auto befindet, gleich. Deshalb lassen sich diese beim Satz von Bayes (\autoref{equ:bayes}) kürzen, damit später die vereinfachte Version (\autoref{equ:bayes_simpl}) verwendet werden kann:
 
 \begin{equation}
     P(G_1)=P(G_2)=P(G_3)=\frac{1}{3}
@@ -82,7 +82,7 @@ Unter der Anwendung des Satzes von Bayes (\autoref{equ:bayes_simpl}) können die
             P(M_3 | G_2) + P(M_3 | G_3)} \\
         & = \frac{\frac{1}{2}}{\frac{1}{2}+1+0} = \frac{1}{3}\\
         P(G_2 | M_3) & = \frac{1}{\frac{1}{2}+1+0} = \frac{2}{3} \\
-        P(G_2 | M_3) & = \frac{0}{\frac{1}{2}+1+0} = 0
+        P(G_3 | M_3) & = \frac{0}{\frac{1}{2}+1+0} = 0
     \end{split}
 \end{equation}
 
