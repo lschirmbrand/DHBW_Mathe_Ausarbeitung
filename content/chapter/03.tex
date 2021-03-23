@@ -21,9 +21,11 @@ Aufgeteilt in Einzelschritte ergeben sich dann die folgenden Regeln für den Spi
     \item Das letztendlich vom Kandidaten gewählte Tor wird geöffnet und er erhält das Objekt, dass sich hinter dem Tor befindet.
 \end{enumerate}
 
+(\cite{Savant:2001})
+
 \section{Das Verhalten des Moderators}
 
-Die Folgenden Varianten unterscheiden sich nur darin, welches Tor der Moderator öffnet, wenn der Kandiadat direkt das richtige Tor auswählt (Rgel 4, Fall A). Beispielsweise kann der Moderator rein zufällig entscheiden oder er macht es sich einfach und öffnet das Tor, das am nächsten zu ihm steht. Wir werden sehen, dass sich für verschiedene Annahmen über das Verhalten des Moderators die Gewinnwahrscheinlichkeit beim Wechseln ändert.
+Die Folgenden Varianten unterscheiden sich nur darin, welches Tor der Moderator öffnet, wenn der Kandiadat direkt das richtige Tor auswählt (Regel 4, Fall A). Beispielsweise kann der Moderator rein zufällig entscheiden oder er macht es sich einfach und öffnet das Tor, das am nächsten zu ihm steht. Wir werden sehen, dass sich für verschiedene Annahmen über das Verhalten des Moderators die Gewinnwahrscheinlichkeit beim Wechseln ändert.
 
 % ------ ausgeglichener Moderator
 
@@ -31,7 +33,7 @@ Die Folgenden Varianten unterscheiden sich nur darin, welches Tor der Moderator 
 
 Für die folgende Erklärung werden die Fälle betrachtet, bei denen der Spieler zu Beginn immer Tor 1 wählt. Alle anderen Fälle können analog erklärt werden.
 
-Es wird die Zusatzannahme getroffen, das der Moderator rein zufällig entscheidet, welches Tor er gerne öffnen möchte. Wählt sich der Kandidat jedoch zuerst ein Tor mit einer Ziege, so hat der Moderator keine andere Wahl, als das andere Ziegentor zu öffnen.
+Es wird die Zusatzannahme getroffen, das der Moderator rein zufällig entscheidet, welches Tor er gerne öffnen möchte. Wählt sich der Kandidat jedoch zuerst ein Tor mit einer Ziege, so hat der Moderator keine andere Wahl, als das andere Ziegentor zu öffnen. (\cite{Krauss:2003})
 
 \subsubsection{Tabellarische Lösung}
 
@@ -86,7 +88,7 @@ Unter der Anwendung des Satzes von Bayes (\autoref{equ:bayes_simpl}) können die
     \end{split}
 \end{equation}
 
-Somit ist bewiesen, dass die Wahrscheinlichkeit von anfangs $\frac{1}{3}$ durch das Wechseln auf Tor 2 auf ein Wahrscheinlichkeit von $\frac{2}{3}$ erhöht werden kann. Dieses Szenario entspricht auch dem klassischen Monty-Hall-Problem, wie es von vos Savos vorgestellt wurde.
+Somit ist bewiesen, dass die Wahrscheinlichkeit von anfangs $\frac{1}{3}$ durch das Wechseln auf Tor 2 auf ein Wahrscheinlichkeit von $\frac{2}{3}$ erhöht werden kann. Dieses Szenario entspricht auch dem klassischen Monty-Hall-Problem, wie es von vos Savant vorgestellt wurde.
 
 % ------ fauler Moderator
 
@@ -94,7 +96,7 @@ Somit ist bewiesen, dass die Wahrscheinlichkeit von anfangs $\frac{1}{3}$ durch 
 
 Für die folgende Erklärung werden die Fälle betrachtet, bei denen der Spieler zu Beginn immer Tor 1 wählt. Alle anderen Fälle können wieder analog erklärt werden.
 
-Nun wird jedoch angenommen, der Moderator sei faul und öffne immer das Tor, das am nächsten zu ihm steht (Beispielsweise das Tor 3). Befindet sich hinter dem ersten Tor eine Ziege hat er jedoch wieder keine andere Wahl, als das zweite Ziegentor zu öffnen.
+Nun wird jedoch angenommen, der Moderator sei faul und öffne immer das Tor, das am nächsten zu ihm steht (Beispielsweise das Tor 3). Befindet sich hinter dem ersten Tor eine Ziege hat er jedoch wieder keine andere Wahl, als das zweite Ziegentor zu öffnen. (\cite{Rosenthal:2008})
 
 \subsubsection{Tabellarische Lösung}
 
@@ -173,6 +175,7 @@ Mit dem Satz von Bayes lässt sich nun die bedingte Wahrscheinlichkeit dafür be
 
 Hierfür muss folgende Zusatzannahme getroffen werden. Hat der Kandidat zuerst das Tor mit dem Auto ausgewählt, entscheidet sich der Moderator mit einer Wahrscheinlichkeit von $p$
 für das Tor mit der höchstmöglichen Nummer. Dadurch lässt sich folgern dass die Wahrscheinlichkeit, dass der Moderator das Tor mit der kleinstenmöglichen Nummer öffnet $1 - p$ beträgt.
+
 Die mathematische Beziehungen sind dann wie folgt aufgebaut:
 
 \begin{equation}
@@ -217,4 +220,4 @@ Dieselben Betrachtungen könenn auch für das Tor mit der kleinstenmöglichen Nu
 
 
 Der unausgeglichene Moderator lässt sich als Verallgemeinerung der vorhergegangen Zusatzannahmen über das Verhalten des Moderators betrachten. So kann man die Gewinnwahrscheinlichkeiten einfach durch Einsetzten des richtigen $p$ ableiten.
-Bei dem ausgeglichenen Moderator wäre $p = \sfrac{1}{2}$ und bei dem faulen Moderator $p = 1$.
+Bei dem ausgeglichenen Moderator wäre $p = \sfrac{1}{2}$ und bei dem faulen Moderator $p = 1$.  (\cite{Rosenthal:2008})
