@@ -1,0 +1,128 @@
+\documentclass[tikz,border=5mm]{standalone}
+
+\usepackage{tikz}
+\usetikzlibrary{trees}
+\usetikzlibrary{positioning}
+
+\begin{document}
+
+\tikzstyle{car} = [color=red]
+
+\begin{tikzpicture}[
+        level distance=3cm,
+        level 3/.style = {level distance=1.5cm},
+        level 5/.style = {level distance=1cm},
+        grow'=right
+    ]
+    \node (Root) {}
+    child {
+            node [car] {$T_1$}
+            child {
+                    node {$T_2$}
+                    child {
+                            node {$\frac{1}{3} \cdot \frac{1}{2} = \frac{1}{6}$}
+                            child {
+                                    node[car] {$T_1$}
+                                    child {
+                                            node {$T_3$}
+                                            child {
+                                                    node {(1)}
+                                                    edge from parent[draw=none]
+                                                }
+                                            edge from parent[draw=none]
+                                        }
+                                    edge from parent[draw=none]
+                                }
+                            edge from parent[draw=none]
+                        }
+                    edge from parent
+                    node[above] {$\frac{1}{2}$}
+                }
+            child {
+                    node {$T_3$}
+                    child {
+                            node {$\frac{1}{3} \cdot \frac{1}{2} = \frac{1}{6}$}
+                            child {
+                                    node[car] {$T_1$}
+                                    child {
+                                            node {$T_2$}
+                                            child {
+                                                    node {(2)}
+                                                    edge from parent[draw=none]
+                                                }
+                                            edge from parent[draw=none]
+                                        }
+                                    edge from parent[draw=none]
+                                }
+                            edge from parent[draw=none]
+                        }
+                    edge from parent
+                    node[above] {$\frac{1}{2}$}
+                }
+            edge from parent
+            node[above] {$\frac{1}{3}$}
+        }
+    child {
+            node {$T_2$}
+            child {
+                    node {$T_3$}
+                    child {
+                            node {$\frac{1}{3} \cdot 1 = \frac{1}{3}$}
+                            child {
+                                    node {$T_2$}
+                                    child {
+                                            node[car] {$T_1$}
+                                            child {
+                                                    node {(3)}
+                                                    edge from parent[draw=none]
+                                                }
+                                            edge from parent[draw=none]
+                                        }
+                                    edge from parent[draw=none]
+                                }
+                            edge from parent[draw=none]
+                        }
+                    edge from parent
+                    node[above] {$1$}
+                }
+            edge from parent
+            node[above] {$\frac{1}{3}$}
+        }
+    child {
+            node {$T_3$}
+            child {
+                    node {$T_2$}
+                    child {
+                            node {$\frac{1}{3} \cdot 1 = \frac{1}{3}$}
+                            child {
+                                    node {$T_3$}
+                                    child {
+                                            node[car] {$T_1$}
+                                            child {
+                                                    node {(4)}
+                                                    edge from parent[draw=none]
+                                                }
+                                            edge from parent[draw=none]
+                                        }
+                                    edge from parent[draw=none]
+                                }
+                            edge from parent[draw=none]
+                        }
+                    edge from parent
+                    node[above] {$1$}
+                }
+            edge from parent
+            node[above] {$\frac{1}{3}$}
+        }
+    ;
+    \begin{scope} [every node/.style={text width=2cm, align=center, anchor=center, font=\bfseries}]
+        \node[above=1cm of Root-1-1-1-1-1] (labels-level) {W};
+        \node[at=(labels-level-|Root-1-1-1-1)] {B};
+        \node[at=(labels-level-|Root-1-1-1)] {P};
+        \node[at=(labels-level-|Root-1-1)] {M};
+        \node[at=(labels-level-|Root-1)] {K};
+
+    \end{scope}
+\end{tikzpicture}
+
+\end{document}

@@ -1,5 +1,10 @@
 %!TEX root = ./main.tex
 
+% arara: pdflatex
+% arara: makeglossaries if changed('glo')
+% arara: biber if changed(toFile('bibliographie.bib')) || changed('bcf')
+% arara: pdflatex while changed('bbl') || changed('gls') || found('log', 'Please rerun') || found('log', 'Label(s) may have changed')
+
 %%**************************************************************
 %%
 %% DHBW Heidenheim - Template for Bachelor Thesis
@@ -46,14 +51,14 @@
 
 % Contents
 \begin{spacing}{1.1}
-\begingroup
+	\begingroup
 
-% set subchapter depth
-\setcounter{tocdepth}{2}
+	% set subchapter depth
+	\setcounter{tocdepth}{2}
 
-\tableofcontents
-\clearpage
-\endgroup
+	\tableofcontents
+	\clearpage
+	\endgroup
 \end{spacing}
 \newpage
 
