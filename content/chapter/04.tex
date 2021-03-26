@@ -39,16 +39,23 @@ Es wird die Zusatzannahme getroffen, das der Moderator rein zufällig entscheide
 
 \subsubsection{Tabellarische Lösung}
 
-\begin{tabular}[h]{cccccc}
+\begin{tabular}[h]{|c|c|c|c|c|c|}
+    \hline
     \textbf{Fall} & \textbf{Tor 1} & \textbf{Tor2} & \textbf{Tor3} & \textbf{Wahl des Moderator} & \textbf{Gewinn beim} \\
-    \multicolumn{6}{c}{\textit{der Moderator möchte Tor 2 öffnen} }                                                     \\
+    \hline
+    \multicolumn{6}{|c|}{\textit{der Moderator möchte Tor 2 öffnen} }                                                   \\
+    \hline
     1             & Auto           & Ziege         & Ziege         & Tor 2                       & Bleiben              \\
     2             & Ziege          & Auto          & Ziege         & Tor 3, da Tor 2 Auto        & Wechseln             \\
     3             & Ziege          & Ziege         & Auto          & Tor 2                       & Wechseln             \\
-    \multicolumn{6}{c}{\textit{der Moderator möchte Tor 3 öffnen} }                                                     \\
+    \hline
+    \multicolumn{6}{|c|}{\textit{der Moderator möchte Tor 3 öffnen}
+    }                                                                                                                   \\
+    \hline
     4             & Auto           & Ziege         & Ziege         & Tor 3                       & Bleiben              \\
     5             & Ziege          & Auto          & Ziege         & Tor 3                       & Wechseln             \\
     6             & Ziege          & Ziege         & Auto          & Tor 2, da Tor 3 Auto        & Wechseln             \\
+    \hline
 \end{tabular}
 
 Zur Auswertung werden die Fälle hierfür mit einander verglichen, in dem der Moderator Tor 3 wählt. Dies ist in den Fällen 2, 4 und 5 erfüllt.
@@ -102,11 +109,14 @@ Nun wird jedoch angenommen, der Moderator sei faul und öffne immer das Tor, das
 
 \subsubsection{Tabellarische Lösung}
 
-\begin{tabular}[h]{cccccc}
+\begin{tabular}[h]{|c|c|c|c|c|c|}
+    \hline
     \textbf{Fall} & \textbf{Tor 1} & \textbf{Tor2} & \textbf{Tor3} & \textbf{Wahl des Moderator} & \textbf{Gewinn beim} \\
+    \hline
     1             & Auto           & Ziege         & Ziege         & Tor 3                       & Bleiben              \\
     2             & Ziege          & Auto          & Ziege         & Tor 3                       & Wechseln             \\
     3             & Ziege          & Ziege         & Auto          & Tor 2, da Tor 3 Auto        & Wechseln             \\
+    \hline
 \end{tabular}
 
 Die Tabelle Zeigt, dass die Wahrscheinlichkeit beim Wechseln zu gewinnen davon abhängt, welches Tor geöffnet wurde.

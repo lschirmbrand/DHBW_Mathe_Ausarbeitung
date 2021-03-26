@@ -106,6 +106,12 @@
 \usepackage[nonumberlist,toc]{glossaries}
 \usepackage{xfrac}
 \usepackage{scrhack}
+\usepackage{caption}
+\usepackage{ragged2e}
+\usepackage{multicol}
+
+\DeclareCaptionFormat{nolinebreak}{#1#2#3}
+\DeclareCaptionFormat{linebreak}{#1#1\\#3}
 
 % Generate glossary
 \makeglossaries{}
