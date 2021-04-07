@@ -9,7 +9,7 @@ machen, und darüber hinaus soll die aktuelle Spielsituation berücksichtigt wer
 
 \section{Definition der Spielregeln}
 
-Aufgeteilt in Einzelschritte ergeben sich dann die folgenden Regeln für den Spieler und den Moderator.
+Aufgeteilt in Einzelschritte ergeben sich dann die folgenden Regeln für den Spieler und den Moderator. (\cite{Savant:2001})
 \begin{enumerate}
     \item Ein Auto und zwei Ziegen werden zufällig auf drei Tore verteilt.
     \item Zu Beginn des Spiels sind alle Tore verschlossen, sodass Auto und Ziegen nicht sichtbar sind.
@@ -22,8 +22,6 @@ Aufgeteilt in Einzelschritte ergeben sich dann die folgenden Regeln für den Spi
     \item Der Moderator bietet dem Kandidaten an. seine Entscheidung zu überdenken und das andere ungeöffnete Tor zu wählen.
     \item Das letztendlich vom Kandidaten gewählte Tor wird geöffnet und er erhält das Objekt, dass sich hinter dem Tor befindet.
 \end{enumerate}
-
-(\cite{Savant:2001})
 
 \section{Das Verhalten des Moderators}
 
@@ -67,34 +65,30 @@ Somit beträgt die Wahrscheinlichkeit $\sfrac{2}{3}$, dass der Kandidat das Auto
 
 Bei dieser und allen anderen Varianten sind die A-priori-Wahrscheinlichkeiten $P(G_i)$, dass sich hinter dem Tor $i$ das Auto befindet, gleich. Deshalb lassen sich diese beim Satz von Bayes (\autoref{equ:bayes}) kürzen, damit später die vereinfachte Version (\autoref{equ:bayes_simpl}) verwendet werden kann:
 
-\begin{equation}
+\begin{equation*}
     P(G_1)=P(G_2)=P(G_3)=\frac{1}{3}
-\end{equation}
+\end{equation*}
 
 Wie zuvor beschrieben wählt der Kandidat Tor 1 aus und wechselt, nach dem öffnen eines Tores durch den Moderator, zu dem nicht zuvor nicht ausgewähltem Tor.
 
 Folgende Ereignismengen können bei dieser Annahme definiert werden, falls der Moderator das 3. Tor öffnet (das geleiche gilt analog für Tor 2):
-\begin{equation}
-    \begin{split}
-        P(M_3 | G_1) & = \frac{1}{2} \\
-        P(M_3 | G_2) & = 1 \\
-        P(M_3 | G_3) & = 0
-    \end{split}
-\end{equation}
+\begin{align*}
+    P(M_3 | G_1) & = \frac{1}{2} \\
+    P(M_3 | G_2) & = 1           \\
+    P(M_3 | G_3) & = 0
+\end{align*}
 
 \textbf{Kurze Erläuterung dieser Beziehungen:} $P(M_3 | G_1)$ beschreibt die Wahrscheinlichkeit dass falls der Gewinn hinter Tor 1 steht, der Moderator Tor 3 öffnet. Da in diesem Fall der Moderator rein zufällig aus zwei Optionen wählt, leigt diese Wahrscheinlichkeit bei \sfrac{1}{2}. Steht das Auto hinter dem Zweiten Tor, hat der Moderator keine andere Wahl, als Tor 3 zu öffnen. Deshalb liegt $P(M_3 | G_2)$ bei $1$. Wenn das Auto hinter Tor 3 steht, kann Tor 3 nicht geöffnet werden. $P(M_3 | G_3)$ muss $0$ sein.
 
 Unter der Anwendung des Satzes von Bayes (\autoref{equ:bayes_simpl}) können die bedingten Wahrscheinlichkeiten, dass hinter den jeweiligen Toren das Auto steht unter der Vorraussetzung, dass Tor 3 vom Moderator geöffnet wurde, bestimmt werden:
 
-\begin{equation}
-    \begin{split}
-        P(G_1 | M_3) & = \frac{P(M_3 | G_1)}{P(M_3 | G_1) +
-            P(M_3 | G_2) + P(M_3 | G_3)} \\
-        & = \frac{\frac{1}{2}}{\frac{1}{2}+1+0} = \frac{1}{3}\\
-        P(G_2 | M_3) & = \frac{1}{\frac{1}{2}+1+0} = \frac{2}{3} \\
-        P(G_3 | M_3) & = \frac{0}{\frac{1}{2}+1+0} = 0
-    \end{split}
-\end{equation}
+\begin{align*}
+    P(G_i | M_3) & = \frac{P(M_3 | G_i)}{P(M_3 | G_1) +
+    P(M_3 | G_2) + P(M_3 | G_3)}                                       \\
+    P(G_1 | M_3) & = \frac{\frac{1}{2}}{\frac{1}{2}+1+0} = \frac{1}{3} \\
+    P(G_2 | M_3) & = \frac{1}{\frac{3}{2}} = \frac{2}{3}               \\
+    P(G_3 | M_3) & = 0
+\end{align*}
 
 Somit ist bewiesen, dass die Wahrscheinlichkeit von anfangs $\frac{1}{3}$ durch das Wechseln auf Tor 2 auf ein Wahrscheinlichkeit von $\frac{2}{3}$ erhöht werden kann. Dieses Szenario entspricht auch dem klassischen Monty-Hall-Problem, wie es von vos Savant vorgestellt wurde.
 
@@ -124,9 +118,16 @@ Da der faule Moderator Tor 2 nur öffnet, wenn hinter Tor 3 das Auto steht, lieg
 
 In den Fällen 1 und 2 öffnet der Moderator das Tor mit der Nummer 3. Nur in einem dieser zwei Fälle gewinnt der Spieler, wenn er wechselt. Das bedeutet die Siegeswahrscheinlichkeit beträgt \sfrac{1}{2}, wenn Tor 3 geöffnet wurde.
 
-Zur Auswertung der tabellarischen Ausarbeitung muss man nun die relevanten Fälle überprüfen. Laut der zuvor festgelegten Bedingungen darf der Moderator nur Tor 3 öffnen.
-Dies geschieht in den Fällen 1,2,4 und 5. Der Spieler gewinnt aber nur in zwei dieser vier Fällen. Das bedeutet die Siegeswahrscheinlichkeit beträgt $\frac{2}{4}$,
-also $\frac{1}{2}$.
+Für den Fall, dass Tor 2 geöffnet wurde sollte unter der Annahme des faulen Moderators klar sein, dass hinter Tor 3 der Gewinn steht (sonst hätte er ja dieses Tor geöffnet). Da dies nur den Fall 3 betrifft, bei dem durch Wechseln gewonnen wird, ist die Gewinnwahrscheinlichkeit, wenn der Kandidat wechselt hier $1$.
+
+Um alle drei Fälle zusammen zu fassen, wird der Mittelwert der Gewinnwahrscheinlichkeiten beim Wechseln berechnet:
+
+\begin{equation}
+    \label{equ:mittelwert_faul}
+    P_W = \frac{\frac{1}{2} + \frac{1}{2} + 1}{3} = \frac{2}{3}
+\end{equation}
+
+Somit entspricht auch die Lösung unter dieser Annahme der ursprünglichen Erklärung von vos Savant.
 
 \subsubsection{Mathematische Lösung}
 
@@ -138,47 +139,37 @@ Durch die im Vorhinein festgelegten Bedingungen ergeben sich die folgende mögli
 
 Für die Erste Situation gelten folgende mathematischen Beziehungen:
 
-\begin{equation}
-    \begin{split}
-        P(M_3 | G_1) = 1 \\
-        P(M_3 | G_2) = 1 \\
-        P(M_3 | G_3) = 0
-    \end{split}
-\end{equation}
+\begin{align*}
+    P(M_3 | G_1) = 1 \\
+    P(M_3 | G_2) = 1 \\
+    P(M_3 | G_3) = 0
+\end{align*}
 
 Durch Anwendung des Satz von Bayes (\autoref{equ:bayes_simpl}) ergeben sich folgende Wahrscheinlichkeiten:
 
-\begin{equation}
-    \begin{split}
-        P(G_1 | M_3) & = \frac{P(M_3 | G_1)}{P(M_3 | G_1) +
-            P(M_3 | G_2) + P(M_3 | G_3)} \\
-        & = \frac{1}{1+1+0} = \frac{1}{2} \\
-        P(G_2 | M_3) & =  \frac{1}{1+1+0} = \frac{1}{2} \\
-        P(G_3 | M_3) & =  \frac{0}{1+1+0} = 0 \\
-    \end{split}
-\end{equation}
+\begin{align*}
+    P(G_i | M_3) & = \frac{P(M_3 | G_i)}{P(M_3 | G_1) + P(M_3 | G_2) + P(M_3 | G_3)} \\
+    P(G_1 | M_3) & = \frac{1}{1+1+0} = \frac{1}{2}                                   \\
+    P(G_2 | M_3) & = \frac{1}{2}                                                     \\
+    P(G_3 | M_3) & = 0                                                               \\
+\end{align*}
 
 Für die zweite Situation, dass Tor 2 geöffnet wird, sehen die Beziehungen anders aus:
 
-\begin{equation}
-    \begin{split}
-        P(M_2 | G_1) = 0 \\
-        P(M_2 | G_2) = 0 \\
-        P(M_2 | G_3) = 1
-    \end{split}
-\end{equation}
+\begin{align*}
+    P(M_2 | G_1) = 0 \\
+    P(M_2 | G_2) = 0 \\
+    P(M_2 | G_3) = 1
+\end{align*}
 
-Mit dem Satz von Bayes lässt sich nun die bedingte Wahrscheinlichkeit dafür bestimmen, dass das Auto hinter Tor 3 steht, unter der Vorraussetzung, dass Tor 2 geöffnet wurde:
+Mit dem Satz von Bayes (\autoref{equ:bayes_simpl}) lässt sich nun die bedingte Wahrscheinlichkeit dafür bestimmen, dass das Auto hinter Tor 3 steht, unter der Vorraussetzung, dass Tor 2 geöffnet wurde:
 
-\begin{equation}
-    \begin{split}
-        P(G_1 | M_2) & = \frac{P(M_2 | G_1)}{P(M_2 | G_1) +
-            P(M_2 | G_2) + P(M_2 | G_3)} \\
-        & = \frac{0}{0+0+1} = 0 \\
-        P(G_2 | M_2) & =  \frac{0}{0+0+1} = 0 \\
-        P(G_3 | M_2) & =  \frac{1}{0+0+1} = 1 \\
-    \end{split}
-\end{equation}
+\begin{align*}
+    P(G_i | M_3) & = \frac{P(M_3 | G_i)}{P(M_3 | G_1) + P(M_3 | G_2) + P(M_3 | G_3)} \\
+    P(G_1 | M_2) & = \frac{0}{0+0+1} = 0                                             \\
+    P(G_2 | M_2) & = 0                                                               \\
+    P(G_3 | M_2) & = 1                                                               \\
+\end{align*}
 
 % ------ unausgeglichener Moderator
 
@@ -189,46 +180,88 @@ für das Tor mit der höchstmöglichen Nummer. Dadurch lässt sich folgern dass 
 
 Die mathematische Beziehungen sind dann wie folgt aufgebaut:
 
-\begin{equation}
-    \begin{split}
-        P(M_3 | G_1) & = p \\
-        P(M_3 | G_2) & = 1 \\
-        P(M_3 | G_3) & = 0
-    \end{split}
-\end{equation}
+\begin{align*}
+    P(M_3 | G_1) & = p \\
+    P(M_3 | G_2) & = 1 \\
+    P(M_3 | G_3) & = 0
+\end{align*}
 
-Mit dem Satz von Bayes:
+Mit dem Satz von  (\autoref{equ:bayes_simpl}):
 
-\begin{equation}
-    \begin{split}
-        P(G_1 | M_3) & = \frac{P(M_3 | G_1)}{P(M_3 | G_1) +
-            P(M_3 | G_2) + P(M_3 | G_3)} \\
-        & = \frac{p}{p+1+0} = \frac{p}{p+1} \\
-        P(G_2 | M_3) & =  \frac{1}{p+1+0} = \frac{1}{p+1} \\
-        P(G_3 | M_3) & =  \frac{0}{p+1+0} = 0 \\
-    \end{split}
-\end{equation}
+\begin{align*}
+    P(G_i | M_3) & = \frac{P(M_3 | G_i)}{P(M_3 | G_1) + P(M_3 | G_2) + P(M_3 | G_3)} \\
+    P(G_1 | M_3) & = \frac{p}{p+1+0} = \frac{p}{p+1}                                 \\
+    P(G_2 | M_3) & = \frac{1}{p+1}                                                   \\
+    P(G_3 | M_3) & = 0                                                               \\
+\end{align*}
 
-Dieselben Betrachtungen könenn auch für das Tor mit der kleinstenmöglichen Nummer getroffen werden:
+Dieselben Betrachtungen können auch für das Tor mit der kleinstenmöglichen Nummer getroffen werden:
 
-\begin{equation}
-    \begin{split}
-        P(M_2 | G_1) & = 1 - p \\
-        P(M_2 | G_2) & = 0 \\
-        P(M_2 | G_3) & = 1
-    \end{split}
-\end{equation}
+\begin{align*}
+    P(M_2 | G_1) & = 1 - p \\
+    P(M_2 | G_2) & = 0     \\
+    P(M_2 | G_3) & = 1
+\end{align*}
 
-\begin{equation}
-    \begin{split}
-        P(G_1 | M_2) & = \frac{P(M_2 | G_1)}{P(M_2 | G_1) +
-            P(M_2 | G_2) + P(M_2 | G_3)} \\
-        & = \frac{1-p}{(1-p)+0+1} = \frac{1-p}{2-p} \\
-        P(G_2 | M_2) & = \frac{0}{(1-p)+0+1} = 0 \\
-        P(G_3 | M_2) & = \frac{1}{(1-p)+0+1} = \frac{1}{2-p} \\
-    \end{split}
-\end{equation}
-
+\begin{align*}
+    P(G_i | M_2) & = \frac{P(M_2 | G_i)}{P(M_2 | G_1) + P(M_2 | G_2) + P(M_2 | G_3)} \\
+    P(G_1 | M_2) & = \frac{1-p}{(1-p)+0+1} = \frac{1-p}{2-p}                         \\
+    P(G_2 | M_2) & = 0                                                               \\
+    P(G_3 | M_2) & = \frac{1}{2-p}                                                   \\
+\end{align*}
 
 Der unausgeglichene Moderator lässt sich als Verallgemeinerung der vorhergegangen Zusatzannahmen über das Verhalten des Moderators betrachten. So kann man die Gewinnwahrscheinlichkeiten einfach durch Einsetzten des richtigen $p$ ableiten.
 Bei dem ausgeglichenen Moderator wäre $p = \sfrac{1}{2}$ und bei dem faulen Moderator $p = 1$.  (\cite{Rosenthal:2008})
+
+Da für $p = \frac{1}{2}$ die Gewinnwahrscheinlichkeit beim Wechseln $\frac{2}{3}$ betrag und bei $p = 1$ dies für den Mittelwert auch galt, wollen wir versuchen, ob wir auch allgemein diesen Mitelwert für alle $p$ ermitteln können. Dieser entspricht dem gewichteten Mittelwert
+
+\label{equ:mittelwert}
+\begin{equation}
+    \begin{split}
+        P_W & = P(G_2 | M_3) \cdot x + P(G_3 | M_2) \cdot y    \\
+        & = \frac{1}{p+1} \cdot x + \frac{1}{2-p} \cdot y,
+    \end{split}
+\end{equation}
+
+wobei es sich bei $x$ bzw. $y$ um die relative Häufigkeit, dass der Moderator Tor 3 bzw. Tor 3 öffnet, handelt. Um diese zu bestimmen, betrachten wir noch einmal die speziellen Fälle ausgeglichen und faul (vgl. \autoref{equ:mittelwert_faul}):
+
+\begin{align*}
+    p = \frac{1}{2} & \Rightarrow  P_W = \frac{2}{3} \cdot \frac{1}{2} + \frac{2}{3} \cdot \frac{1}{2} = \frac{2}{3} \\
+    p = 1           & \Rightarrow P_W = \frac{1}{2} \cdot \frac{2}{3} + 1\cdot \frac{1}{3} = \frac{2}{3}
+\end{align*}
+
+Die Werte für $x$ und $y$ lassen sich in Abhängigkeit von $p$ in einer Tabelle abtragen:
+
+\begin{center}
+    \begin{tabular}[h]{|c|c|c|}
+        \hline
+        \textbf{$p$}  & \textbf{$x$}  & \textbf{$y$}  \\
+        \hline
+        $\frac{1}{2}$ & $\frac{1}{2}$ & $\frac{1}{2}$ \\
+        $1$           & $\frac{2}{3}$ & $\frac{1}{3}$ \\
+        \hline
+    \end{tabular}
+\end{center}
+
+Trägt man die Punkte in ein Koordinatensystem und legt Geraden hindurch (\autoref{fig:x-y}), lassen sich für x und y folgende Funktionen ablesen:
+
+\begin{figure}[hbtp]
+    \centering
+    \captionsetup{name=Abb., justification=centering, format=nolinebreak}
+    \includegraphics[width=0.3\textwidth]{tex/graph.pdf}
+    \caption{Bestimmung $x(p)$ und $y(p)$} \label{fig:x-y}
+\end{figure}
+
+\begin{align*}
+    x(p) & = \frac{1}{3} \cdot p + \frac{1}{3} = \frac{p + 1}{3} \\
+    y(p) & = -\frac{1}{3} \cdot p + \frac{2}{3} = \frac{2-p}{3}
+\end{align*}
+
+Schlussendlich kann allgemein der Mittelwert nach der Formel \ref{equ:mittelwert} bestimmt werden:
+
+\begin{align*}
+    P_W & = P(G_2 | M_3) \cdot x(p) + P(G_3 | M_2) \cdot y(p)                                       \\
+        & = \frac{1}{p+1} \cdot \frac{p + 1}{3} + \frac{1}{2-p} \cdot \frac{2 - p}{3} = \frac{2}{3}
+\end{align*}
+
+Somit haben wir gezeigt, dass unabhängig von $p$ (also egal ob der Moderator eine Türe in irgendeiner Weise bevorzugt) die Wahrscheinlichkeit das Auto durch Wechseln zu gewinnen zu mindest im Mittel $\frac{1}{3}$ beträgt.

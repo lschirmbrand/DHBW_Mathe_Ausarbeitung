@@ -17,14 +17,12 @@ Anders erklärt, kann man auch folgendermaßen Argumentieren: Dass der Kandidat 
 
 Der Entscheidungsbaum in \autoref{fig:tree} veranschaulicht alle Fäll, bei denen das Auto hinter dem ersten Tor steht. Bei den Fällen (1) und (2) gewinnt man, wenn man nicht wechselt, mit Wechseln gewinnt man in den Fällen (3) und (4). Addiert man die Wahrscheinlichkeiten der jeweiligen Pfade erhällt man die Gewinnwahrscheinlichkeiten das Auto zu gewinnen beim Bleiben $P_B(Auto)$ und Wechseln $P_W(Auto)$:
 
-\begin{equation}
-    \begin{split}
-        P_B(Auto) & = P(T_1T_2) + P(T_1T_3) \\
-        & = \frac{1}{6} + \frac{1}{6} = \frac{1}{3} \\
-        P_W(Auto) & = P(T_2T_3) + P(T_3T_2) \\
-        &= \frac{1}{3} + \frac{1}{3} = \frac{2}{3} \\
-    \end{split}
-\end{equation}
+\begin{align*}
+    P_B(Auto) & = P(T_1T_2) + P(T_1T_3)                   \\
+              & = \frac{1}{6} + \frac{1}{6} = \frac{1}{3} \\
+    P_W(Auto) & = P(T_2T_3) + P(T_3T_2)                   \\
+              & = \frac{1}{3} + \frac{1}{3} = \frac{2}{3} \\
+\end{align*}
 
 Somit haben wir die Lösung von vos Savos bestätigt.
 
