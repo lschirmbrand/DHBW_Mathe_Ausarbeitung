@@ -19,13 +19,13 @@ Aufgeteilt in Einzelschritte ergeben sich dann die folgenden Regeln für den Spi
                     Der Moderator hat dabei die freie Wahl. Wie er diese Wahl trifft wird in den folgenden Varianten durch Zusatzannahmen festgelegt.
               \item Fall B: Hat der Kandidat ein Tor mit einer Ziege gewählt, \textit{muss} der Moderator das Tor nehmen, hinter dem die andere Ziege steht.
           \end{itemize}
-    \item Der Moderator bietet dem Kandidaten an. seine Entscheidung zu überdenken und das andere ungeöffnete Tor zu wählen.
+    \item Der Moderator bietet dem Kandidaten an, seine Entscheidung zu überdenken und das andere ungeöffnete Tor zu wählen.
     \item Das letztendlich vom Kandidaten gewählte Tor wird geöffnet und er erhält das Objekt, dass sich hinter dem Tor befindet.
 \end{enumerate}
 
 \section{Das Verhalten des Moderators}
 
-Die Folgenden Varianten unterscheiden sich nur darin, welches Tor der Moderator öffnet, wenn der Kandiadat direkt das richtige Tor auswählt (Regel 4, Fall A). Beispielsweise kann der Moderator rein zufällig entscheiden oder er macht es sich einfach und öffnet das Tor, das am nächsten zu ihm steht. Wir werden sehen, dass sich für verschiedene Annahmen über das Verhalten des Moderators die Gewinnwahrscheinlichkeit beim Wechseln ändert.
+Die folgenden Varianten unterscheiden sich nur darin, welches Tor der Moderator öffnet, wenn der Kandiadat direkt das richtige Tor auswählt (Regel 4, Fall A). Beispielsweise kann der Moderator rein zufällig entscheiden oder er macht es sich einfach und öffnet das Tor, das am nächsten zu ihm steht. Wir werden sehen, dass sich für verschiedene Annahmen über das Verhalten des Moderators die Gewinnwahrscheinlichkeit beim Wechseln ändert.
 
 % ------ ausgeglichener Moderator
 
@@ -33,7 +33,7 @@ Die Folgenden Varianten unterscheiden sich nur darin, welches Tor der Moderator 
 
 Für die folgende Erklärung werden die Fälle betrachtet, bei denen der Spieler zu Beginn immer Tor 1 wählt. Alle anderen Fälle können analog erklärt werden.
 
-Es wird die Zusatzannahme getroffen, das der Moderator rein zufällig entscheidet, welches Tor er gerne öffnen möchte. Wählt sich der Kandidat jedoch zuerst ein Tor mit einer Ziege, so hat der Moderator keine andere Wahl, als das andere Ziegentor zu öffnen. (\cite{Krauss:2003})
+Es wird die Zusatzannahme getroffen, das der Moderator rein zufällig entscheidet, welches Tor er gerne öffnen möchte. Wählt der Kandidat jedoch zuerst ein Tor mit einer Ziege, so hat der Moderator keine andere Wahl, als das andere Ziegentor zu öffnen. (\cite{Krauss:2003})
 
 \subsubsection{Tabellarische Lösung}
 
@@ -56,7 +56,7 @@ Es wird die Zusatzannahme getroffen, das der Moderator rein zufällig entscheide
     \hline
 \end{tabular}
 
-Zur Auswertung werden die Fälle mit einander verglichen, bei denen wechseln bzw. bleiben zum Gewinn führt.
+Zur Auswertung werden die Fälle mit einander verglichen, bei denen Wechseln bzw. Bleiben zum Gewinn führt.
 Dabei sieht man, dass der Kandidat in 4 der 6 Fälle das Auto durch den Wechsel findet (Fälle 2, 3, 5 und 6). In den anderen Fällen (1 und 4) würde der Kandidat das Auto gewinnen, wenn er auf seiner ersten Wahl beharrt.
 
 Somit liegt die Wahrscheinlichkeit, dass der Kandidat das Auto durch Wechseln findet bei $P_W(Auto) = \frac{2}{3}$.
@@ -69,16 +69,16 @@ Bei dieser und allen anderen Varianten sind die A-priori-Wahrscheinlichkeiten $P
     P(G_1)=P(G_2)=P(G_3)=\frac{1}{3}
 \end{equation*}
 
-Wie zuvor beschrieben wählt der Kandidat Tor 1 aus und wechselt, nach dem öffnen eines Tores durch den Moderator, zu dem nicht zuvor nicht ausgewähltem Tor.
+Wie zuvor beschrieben wählt der Kandidat Tor 1 aus und wechselt, nach dem Öffnen eines Tores durch den Moderator, zu dem nicht zuvor ausgewähltem Tor.
 
-Folgende bedingte Wahrscheinlichkeiten können bei dieser Annahme definiert werden, falls der Moderator das 3. Tor öffnet (das geleiche gilt analog für Tor 2):
+Folgende bedingte Wahrscheinlichkeiten können bei dieser Annahme definiert werden, falls der Moderator das 3. Tor öffnet (das Gleiche gilt analog für Tor 2):
 \begin{align*}
     P(M_3 | G_1) & = \frac{1}{2} \\
     P(M_3 | G_2) & = 1           \\
     P(M_3 | G_3) & = 0
 \end{align*}
 
-\textbf{Kurze Erläuterung dieser Beziehungen:} $P(M_3 | G_1)$ beschreibt die Wahrscheinlichkeit dass falls der Gewinn hinter Tor 1 steht, der Moderator Tor 3 öffnet. Da in diesem Fall der Moderator rein zufällig aus zwei Optionen wählt, leigt diese Wahrscheinlichkeit bei $\frac{1}{2}$. Steht das Auto hinter dem Zweiten Tor, hat der Moderator keine andere Wahl, als Tor 3 zu öffnen. Deshalb liegt $P(M_3 | G_2)$ bei $1$. Wenn das Auto hinter Tor 3 steht, kann Tor 3 nicht geöffnet werden. $P(M_3 | G_3)$ muss $0$ sein.
+\textbf{Kurze Erläuterung dieser Beziehungen:} $P(M_3 | G_1)$ beschreibt die Wahrscheinlichkeit dass falls der Gewinn hinter Tor 1 steht, der Moderator Tor 3 öffnet. Da in diesem Fall der Moderator rein zufällig aus zwei Optionen wählt, liegt diese Wahrscheinlichkeit bei $\frac{1}{2}$. Steht das Auto hinter dem Zweiten Tor, hat der Moderator keine andere Wahl, als Tor 3 zu öffnen. Deshalb liegt $P(M_3 | G_2)$ bei $1$. Wenn das Auto hinter Tor 3 steht, kann Tor 3 nicht geöffnet werden. $P(M_3 | G_3)$ muss $0$ sein.
 
 Unter der Anwendung des Satzes von Bayes (\autoref{equ:bayes_simpl}) können die bedingten Wahrscheinlichkeiten, dass hinter den jeweiligen Toren das Auto steht unter der Vorraussetzung, dass Tor 3 vom Moderator geöffnet wurde, bestimmt werden:
 
@@ -184,7 +184,7 @@ Somit entspricht auch die Lösung unter dieser Annahme zumindest im Mittel der u
 \subsection{Der Moderator handelt unausgeglichen}
 
 Hierfür muss folgende Zusatzannahme getroffen werden. Hat der Kandidat zuerst das Tor mit dem Auto ausgewählt, entscheidet sich der Moderator mit einer Wahrscheinlichkeit von $p$
-für das Tor mit der höchstmöglichen Nummer. Dadurch lässt sich folgern dass die Wahrscheinlichkeit, dass der Moderator das Tor mit der kleinstenmöglichen Nummer öffnet $1 - p$ beträgt.
+für das Tor mit der höchstmöglichen Nummer. Dadurch lässt sich folgern, dass die Wahrscheinlichkeit, dass der Moderator das Tor mit der kleinstenmöglichen Nummer öffnet $1 - p$ beträgt.
 
 \subsubsection{Mathematische Lösung}
 
@@ -196,7 +196,7 @@ Die bedingten Wahrscheinlichkeiten, dass der Moderator das letzte Tor öffnet, u
     P(M_3 | G_3) & = 0
 \end{align*}
 
-Mit dem Satz von  (\autoref{equ:bayes_simpl}):
+Mit dem Satz von Bayes (\autoref{equ:bayes_simpl}):
 
 \begin{align*}
     P(G_i | M_3) & = \frac{P(M_3 | G_i)}{P(M_3 | G_1) + P(M_3 | G_2) + P(M_3 | G_3)} \\
